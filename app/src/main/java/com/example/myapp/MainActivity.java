@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.myskype.MyskypeActivity;
+import com.example.sqlite.activity.SqliteActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_album).setOnClickListener(this);
         findViewById(R.id.btn_quotes).setOnClickListener(this);
         findViewById(R.id.btn_myskype).setOnClickListener(this);
+        findViewById(R.id.btn_sqlite).setOnClickListener(this);
     }
 
     @Override
@@ -31,7 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_myskype:
                 intent = new Intent(this, MyskypeActivity.class);
                 break;
-
+            case R.id.btn_sqlite:
+                intent = new Intent(this, SqliteActivity.class);
+                break;
         }
         startActivity(intent);
     }
